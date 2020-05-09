@@ -33,7 +33,7 @@ public class Vendedor extends Empregado {
                 "\nNome: " + nome +
                 "\nApelidos: " + apelidos +
                 "\nDNI: " + DNI +
-                "\ndDirección: " + direccion,
+                "\nDirección: " + direccion,
                 "DATOS PRINCIPAIS" +
                 "\nPosto na empresa: Vendedor" +
                 "\nAntigüidade: " + antiguedade + " anos" +

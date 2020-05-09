@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="595.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tarefa9.CrearEmpregado">
+<AnchorPane prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tarefa9.CrearEmpregado">
    <children>
       <VBox alignment="CENTER_LEFT" prefHeight="537.0" prefWidth="340.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
          <children>
@@ -24,7 +24,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="nomeField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -37,7 +37,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="apelidosField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -50,7 +50,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="DNIField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -63,7 +63,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="direccionField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -84,7 +84,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ComboBox prefHeight="25.0" prefWidth="220.0" />
+                  <ComboBox fx:id="postoComboBox" onAction="#cambiarPosto" prefHeight="25.0" prefWidth="220.0" promptText="Selecciona un posto" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -97,7 +97,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="antigField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -110,46 +110,72 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="telfField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" disable="true" layoutX="10.0" layoutY="334.0" prefHeight="25.0" prefWidth="200.0">
+            <HBox fx:id="movilBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="334.0" prefHeight="25.0" prefWidth="200.0">
                <children>
                   <Label prefHeight="25.0" prefWidth="130.0" text="Teléfono móvil">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="movilField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" disable="true" layoutX="10.0" layoutY="334.0" prefHeight="25.0" prefWidth="200.0">
+            <HBox fx:id="faxBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="334.0" prefHeight="25.0" prefWidth="200.0">
                <children>
                   <Label prefHeight="25.0" prefWidth="130.0" text="Número de fax">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="faxField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" disable="true" layoutX="10.0" layoutY="429.0" prefHeight="25.0" prefWidth="200.0">
+            <HBox fx:id="despachoBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="429.0" prefHeight="25.0" prefWidth="200.0">
                <children>
                   <Label prefHeight="25.0" prefWidth="130.0" text="Despacho">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="despachoField" prefWidth="220.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="areaBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="486.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="130.0" text="Área de venda">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="areaField" prefWidth="220.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="porcentBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="486.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="130.0" text="Porcentaxe">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="porcentField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -162,7 +188,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="220.0" />
+                  <TextField fx:id="salarioField" prefWidth="220.0" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -173,7 +199,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
                <children>
-                  <Button maxWidth="57.0" mnemonicParsing="false" text="Añadir" />
+                  <Button fx:id="crearButton" mnemonicParsing="false" onAction="#crearEmpregado" prefWidth="70.0" text="Añadir" />
                </children>
             </HBox>
          </children></VBox>

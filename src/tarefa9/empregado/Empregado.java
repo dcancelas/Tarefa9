@@ -36,7 +36,7 @@ public abstract class Empregado {
                 "\nNome: " + nome +
                 "\nApelidos: " + apelidos +
                 "\nDNI: " + DNI +
-                "\ndDirección: " + direccion,
+                "\nDirección: " + direccion,
                 "DATOS PRINCIPAIS" +
                 "\nAntigüidade: " + antiguedade + " anos" +
                 "\nTeléfono: " + telefono +

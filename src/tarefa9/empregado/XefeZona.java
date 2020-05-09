@@ -30,7 +30,7 @@ public class XefeZona extends Empregado {
                 "\nNome: " + nome +
                 "\nApelidos: " + apelidos +
                 "\nDNI: " + DNI +
-                "\ndDirección: " + direccion,
+                "\nDirección: " + direccion,
                 "DATOS PRINCIPAIS" +
                 "\nPosto na empresa: Xefe de zona" +
                 "\nAntigüidade: " + antiguedade + " anos" +

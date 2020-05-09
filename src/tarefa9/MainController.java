@@ -8,41 +8,73 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import tarefa9.empregado.Empregado;
 import tarefa9.empregado.Secretario;
+import tarefa9.empregado.Vendedor;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * @author dcancelas
+ */
 public class MainController implements Initializable {
 
+    public TextArea infoPersoal;
+    public TextArea datosPrincipais;
+    public TextArea cocheEmpresa;
+    public TextArea listaPersoas;
     public ComboBox<String> selectorEmpregados;
+    static Stage stageCrearEmpregado = new Stage();
 
-    ArrayList<Empregado> listaEmpregados = new ArrayList<>();
-    ObservableList<String> nomeEmpregados = FXCollections.observableArrayList();
+    final static List<Empregado> listaEmpregados = new ArrayList<>();
+    static ObservableList<String> nomeEmpregados = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         selectorEmpregados.setItems(nomeEmpregados);
-        listaEmpregados.add(new Secretario("Antonio", "García", "346984RD", "Avenida mi pana", 6, "603057532", 2300, "5B", "843754156"));
-        this.cargarEmpregados();
+        listaEmpregados.add(new Vendedor("Antonio", "García", "346984RD", "Avenida de exemplo", 6, "603057532", 2300, "864245173", "Área de exemplo", 20));
+        cargarEmpregados();
     }
 
-    public void cargarEmpregados() {
+    public static void cargarEmpregados() {
         for (Empregado listaEmpregado : listaEmpregados) {
             nomeEmpregados.add(listaEmpregado.getNomeApelidos());
         }
     }
 
     public void novoEmpregado(ActionEvent event) throws IOException {
-        Stage stageCrearEmpregado = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("CrearEmpregado.fxml"));
         stageCrearEmpregado.setTitle("Tarefa9");
-        stageCrearEmpregado.setScene(new Scene(root, 400, 580));
+        stageCrearEmpregado.setScene(new Scene(root, 400, 700));
         stageCrearEmpregado.setResizable(false);
         stageCrearEmpregado.show();
+    }
+
+    public Empregado buscarEmpregado() {
+        for (Empregado listaEmpregado : listaEmpregados) {
+            if (listaEmpregado.getNomeApelidos().equals(selectorEmpregados.getValue()))
+                return listaEmpregado;
+        }
+        return null;
+    }
+
+    public void borrarEmpregado(ActionEvent actionEvent) {
+        for (Empregado listaEmpregado : listaEmpregados) {
+            System.out.println(listaEmpregado.getNomeApelidos());
+        }
+    }
+
+    public void cargarInfo(ActionEvent actionEvent) {
+        String[] imprimir = this.buscarEmpregado().imprimir();
+        infoPersoal.setText(imprimir[0]);
+        datosPrincipais.setText(imprimir[1]);
+        cocheEmpresa.setText(imprimir[2]);
+        listaPersoas.setText(imprimir[3]);
     }
 }

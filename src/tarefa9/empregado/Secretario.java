@@ -24,7 +24,7 @@ public class Secretario extends Empregado {
                 "\nNome: " + nome +
                 "\nApelidos: " + apelidos +
                 "\nDNI: " + DNI +
-                "\ndDirección: " + direccion,
+                "\nDirección: " + direccion,
                 "DATOS PRINCIPAIS" +
                 "\nPosto na empresa: Secretario" +
                 "\nAntigüidade: " + antiguedade + " anos" +
