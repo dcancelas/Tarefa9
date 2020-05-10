@@ -41,7 +41,7 @@ public class Vendedor extends Empregado {
                 "\nTeléfono móvil: " + telMovil +
                 "\nÁrea de venda: " + area +
                 "\nPorcentaxe das vendas: " + porcentVendas + "%" +
-                "\nSupervisor: " + supervisor +
+                "\nSupervisor: " + supervisor.nome + " " + supervisor.apelidos +
                 "\n\nSalario: " + salario + " €/mes",
                 "COCHE DE EMPRESA" +
                 "\nMatrícula: " + matricula +

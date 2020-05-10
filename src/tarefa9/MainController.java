@@ -11,7 +11,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import tarefa9.empregado.Empregado;
-import tarefa9.empregado.Secretario;
 import tarefa9.empregado.Vendedor;
 
 import java.io.IOException;
@@ -38,14 +37,6 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         selectorEmpregados.setItems(nomeEmpregados);
-        listaEmpregados.add(new Vendedor("Antonio", "García", "346984RD", "Avenida de exemplo", 6, "603057532", 2300, "864245173", "Área de exemplo", 20));
-        cargarEmpregados();
-    }
-
-    public static void cargarEmpregados() {
-        for (Empregado listaEmpregado : listaEmpregados) {
-            nomeEmpregados.add(listaEmpregado.getNomeApelidos());
-        }
     }
 
     public void novoEmpregado(ActionEvent event) throws IOException {

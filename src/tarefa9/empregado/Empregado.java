@@ -15,7 +15,7 @@ public abstract class Empregado {
     protected String telefono;
     protected float salario;
     protected float salarioBase;
-    protected Empregado supervisor;
+    protected XefeZona supervisor;
 
     public Empregado() {
     }
@@ -28,6 +28,7 @@ public abstract class Empregado {
         this.telefono = telefono;
         this.salario = salario;
         this.salarioBase = salario;
+        this.supervisor = new XefeZona();
     }
 
     public String[] imprimir() {
@@ -49,7 +50,7 @@ public abstract class Empregado {
         return nome + " " + apelidos;
     }
 
-    public String cambiarSupervisor(Empregado supervisor) {
+    public String cambiarSupervisor(XefeZona supervisor) {
         this.supervisor = supervisor;
         return "O supervisor foi cambiado con éxito";
     }

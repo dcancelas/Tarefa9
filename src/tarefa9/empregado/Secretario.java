@@ -31,8 +31,8 @@ public class Secretario extends Empregado {
                 "\nTeléfono: " + telefono +
                 "\nNúmero de fax: " + numFax +
                 "\nDespacho: " + despacho +
-                "\nSupervisor: " + supervisor +
-                "\n\nSalario: " + salario + " €/mes"
+                "\nSupervisor: " + supervisor.nome + " " + supervisor.apelidos +
+                "\n\nSalario: " + salario + " €/mes","",""
         };
     }
 

@@ -21,6 +21,7 @@ public class XefeZona extends Empregado {
     public XefeZona(String nome, String apelidos, String DNI, String direccion, int antiguedade, String telefono, float salario, String despacho) {
         super(nome, apelidos, DNI, direccion, antiguedade, telefono, salario);
         this.despacho = despacho;
+        this.secretario = new Secretario();
     }
 
     @Override
